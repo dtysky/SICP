@@ -1,0 +1,13 @@
+(define (func a b c)
+  (define ab (+ a b))
+  (define ac (+ a c))
+  (define bc (+ b c))
+  (cond ((and (> ab ac)
+              (> ab bc))
+         ab)
+        ((and (> ac ab)
+              (> ac bc))
+         ac)
+        (else bc)))
+
+(func 1 2 3)
