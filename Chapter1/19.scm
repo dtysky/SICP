@@ -17,6 +17,8 @@
                        (- count 1)))))
   (_iter 1 0 0 1 n))
 
+(fib-iter 10)
+
 
 ;a = bq + aq + ap
 ;b = bp + aq

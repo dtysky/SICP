@@ -17,6 +17,8 @@
                        a
                        (- b 1)))))
   (_iter 0 a b))
+
+(fast-mult-iter 2 3)
                        
 ;b == 0:
 ;f(a, b) = 0
