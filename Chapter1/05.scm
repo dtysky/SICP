@@ -7,5 +7,7 @@
 
 (test 0 (p))
 
-;If applicative order, it will give the result; otherwise, it will get a never-ending loop because of the expansion of (p).
-;I use DrRacket to run this, it's normal order.
+;In normal order, the (test) will be repleaced at first
+;In applicative order, all values will be processed at first
+;If normal order, it will give the result; otherwise, it will get a never-ending loop because of the expansion of (p).
+;I use DrRacket to run this, it's applicative order.

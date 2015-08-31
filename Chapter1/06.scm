@@ -26,5 +26,5 @@
 
 (new-sqrt 100)
 
-;The order of "new-if" is normal order, and that of "if" is applicative order.
+;The order of "new-if" is applicative order, two case will be processed at first, and that of "if" is special.
 ;"new-if" will not stop until all arguments are primitive operations. 
