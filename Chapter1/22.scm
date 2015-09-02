@@ -30,8 +30,7 @@
 
 (define (report-prime elapsed-time)
   (display " *** ")
-  (display elapsed-time)
-  (newline))
+  (display elapsed-time))
          
 (define (start-prime-test n start-time)
   (if (prime? n)
@@ -43,14 +42,19 @@
   (display n)
   (start-prime-test n (runtime)))
 
-(define (search-for-primes range-l range-r)
-  (cond ((= range-l range-r) false)
-        ((not (is-odd? range-l)) (search-for-primes (+ range-l 1)
-                                                    range-r))
-        ((start-prime-test range-l (runtime)) range-l)
+(define (search-for-primes range-l range-r nums)
+  (cond ((or (= range-l range-r)
+             (= nums 0))
+         (newline))
+        ((not (is-odd? range-l))
+         (search-for-primes (+ range-l 1) range-r nums))
+        ((timed-prime-test range-l)
+         (search-for-primes (+ range-l 2)
+                            range-r (- nums 1)))
         (else (search-for-primes (+ range-l 2)
-                                 range-r))))
+                                 range-r nums))))
 
-(search-for-primes 10000 20000)
-(search-for-primes 100000 200000)
+(search-for-primes 10000 20000 3)
+(search-for-primes 100000 200000 3)
+(search-for-primes 1000000 2000000 3)
                                      
