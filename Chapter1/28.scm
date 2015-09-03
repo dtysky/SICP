@@ -4,7 +4,10 @@
   (* x x))
 
 (define (trivial-square a n)
-  (if (= (remainder (square a) n) 1)
+  (if (and (not (= a
+                   (- n 1)))
+           (not (= a 1))
+           (= (remainder (square a) n) 1))
       0
       a))
   
