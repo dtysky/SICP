@@ -1,0 +1,1 @@
+;If using square, the (expmod base (/exp 2) m) will be only processed once, else, it will be processed twice in each substitution.
