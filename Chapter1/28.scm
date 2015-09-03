@@ -44,3 +44,14 @@
 
 (map (lambda (x) (test x))
        test-num)
+
+;3 *** Yes
+;7 *** Yes
+;13 *** Yes
+;211 *** Yes
+;561 *** No
+;1105 *** No
+;1729 *** No
+;2465 *** No
+;2821 *** No
+;6601 *** No
