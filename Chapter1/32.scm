@@ -53,7 +53,7 @@
 (map (lambda (x) (test x))
        test-num)
 
-5
+;5
 ; **sum** 15
 ; **sum-iter** 15
 ; **fact** 120
