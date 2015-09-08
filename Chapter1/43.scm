@@ -1,13 +1,16 @@
 #lang planet neil/sicp
 
 (define (repeat g n)
-  (if (= n 0)
-      (lambda (x) (g x))
-      (lambda (x) ((repeat g (- n 1)) x))))
+  (lambda (x)
+    (define (_call i)
+      (if (= i 1)
+          (g x)
+          (g (_call (- i 1)))))
+    (_call n)))
 
 (define (square x)
   (* x x))
 
 (display ((repeat square 2) 5))
 
-;25
+;625
