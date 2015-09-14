@@ -1,4 +1,4 @@
-#lang planet neil/sicp
+ #lang planet neil/sicp
 
 (define (make-point x y)
   (cons x y))
@@ -58,9 +58,9 @@
   (let ((rect
          (make-rect
           (let ((sp (car point-pair)))
-            (make-point (car sp) (car (cdr sp))))
+            (make-point (car sp) (cadr sp)))
           (let ((ep (car (cdr point-pair))))
-            (make-point (car ep) (car (cdr ep)))))))
+            (make-point (car ep) (cadr ep))))))
     (display point-pair)
     (newline)
     (display "area : ")
