@@ -4,10 +4,10 @@
   (cons a b))
 
 (define (upper-bound interval)
-  (car interval))
+  (cdr interval))
 
 (define (lower-bound interval)
-  (cdr interval))
+  (car interval))
 
 (define (sub-interval i1 i2)
   (make-interval
@@ -16,8 +16,8 @@
 
 
 (define test-num
-  '(((0 4) ( 4 0))
-    ((-3 9) (5 -2))))
+  '(((0 4) ( 3 6))
+    ((-3 9) (5 10))))
 
 (define (test pair)
   (let ((i1 (make-interval
@@ -45,12 +45,12 @@
      test-num)
 
 
-;pair : ((0 4) (4 0))
+;pair : ((0 4) (3 6))
 ;i1 : (0 . 4)
-;i2 : (4 . 0)
-;sub : (-4 . 4)
+;i2 : (3 . 6)
+;sub : (-2 . -3)
 
-;pair : ((-3 9) (5 -2))
+;pair : ((-3 9) (5 10))
 ;i1 : (-3 . 9)
-;i2 : (5 . -2)
-;sub : (-8 . 11)
+;i2 : (5 . 10)
+;sub : (-1 . -8)

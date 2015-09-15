@@ -4,10 +4,10 @@
   (cons a b))
 
 (define (upper-bound interval)
-  (car interval))
+  (cdr interval))
 
 (define (lower-bound interval)
-  (cdr interval))
+  (car interval))
 
 (define test-num
   '((2 3)
@@ -38,20 +38,20 @@
 
 ;pair : (2 3)
 ;interval : (2 . 3)
-;upper-bound : 2
-;lower-bound : 3
+;upper-bound : 3
+;lower-bound : 2
 
 ;pair : (4 9)
 ;interval : (4 . 9)
-;upper-bound : 4
-;lower-bound : 9
+;upper-bound : 9
+;lower-bound : 4
 
 ;pair : (3 8)
 ;interval : (3 . 8)
-;upper-bound : 3
-;lower-bound : 8
+;upper-bound : 8
+;lower-bound : 3
 
 ;pair : (33 50)
 ;interval : (33 . 50)
-;upper-bound : 33
-;lower-bound : 50
+;upper-bound : 50
+;lower-bound : 33
